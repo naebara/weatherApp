@@ -7,7 +7,7 @@ const Day = ({ day, list }) => {
 		<div>
 			{format(new Date(day), 'eeee, dd LLLL')}
 			{list.map((item) => {
-				return <div key={item?.dt}>{item?.dt_txt}</div>
+				return <div key={item?.dt}>{item?.dt_txt + " - " + item?.main.temp + "C"}</div>
 			})}
 		</div>
 	)
